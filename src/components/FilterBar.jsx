@@ -1,7 +1,7 @@
 import React from 'react';
 import { Search } from 'lucide-react';
 
-const categories = ["All", "Chat", "Voice", "Avatar", "NSFW", "Free"];
+const categories = ["Tous", "NSFW", "Girlfriend"];
 
 const FilterBar = ({ activeCategory, setActiveCategory, searchQuery, setSearchQuery }) => {
     return (
@@ -12,7 +12,7 @@ const FilterBar = ({ activeCategory, setActiveCategory, searchQuery, setSearchQu
                 gap: '1.5rem',
                 alignItems: 'center'
             }}>
-                {/* Search Input */}
+                {/* Barre de Recherche */}
                 <div className="glass-panel" style={{
                     position: 'relative',
                     width: '100%',
@@ -24,7 +24,7 @@ const FilterBar = ({ activeCategory, setActiveCategory, searchQuery, setSearchQu
                     <Search size={20} style={{ color: 'var(--text-muted)', marginRight: '10px' }} />
                     <input
                         type="text"
-                        placeholder="Search for your AI companion..."
+                        placeholder="Recherchez votre compagne IA..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         style={{
@@ -38,29 +38,7 @@ const FilterBar = ({ activeCategory, setActiveCategory, searchQuery, setSearchQu
                     />
                 </div>
 
-                {/* Categories */}
-                <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    {categories.map((cat) => (
-                        <button
-                            key={cat}
-                            onClick={() => setActiveCategory(cat)}
-                            style={{
-                                padding: '8px 16px',
-                                borderRadius: '99px',
-                                fontSize: '0.9rem',
-                                fontWeight: 500,
-                                background: activeCategory === cat
-                                    ? 'var(--accent-primary)'
-                                    : 'rgba(255, 255, 255, 0.05)',
-                                color: activeCategory === cat ? 'white' : 'var(--text-muted)',
-                                border: activeCategory === cat ? 'none' : '1px solid rgba(255,255,255,0.1)',
-                                transition: 'all 0.2s ease'
-                            }}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
+                {/* Catégories supprimées à la demande de l'utilisateur */}
             </div>
         </div>
     );

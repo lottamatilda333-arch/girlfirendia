@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ExternalLink, Star, Heart } from 'lucide-react';
 
 const SolutionCard = ({ solution }) => {
@@ -37,9 +38,9 @@ const SolutionCard = ({ solution }) => {
                     position: 'absolute',
                     top: 10,
                     left: 10,
-                    background: solution.price === 'Free' ? 'rgba(34, 197, 94, 0.2)' : 'rgba(139, 92, 246, 0.2)',
-                    color: solution.price === 'Free' ? '#4ade80' : '#c4b5fd',
-                    border: `1px solid ${solution.price === 'Free' ? '#22c55e' : '#8b5cf6'}`,
+                    background: solution.price === 'Gratuit' ? 'rgba(34, 197, 94, 0.2)' : 'rgba(139, 92, 246, 0.2)',
+                    color: solution.price === 'Gratuit' ? '#4ade80' : '#c4b5fd',
+                    border: `1px solid ${solution.price === 'Gratuit' ? '#22c55e' : '#8b5cf6'}`,
                     padding: '4px 10px',
                     borderRadius: '20px',
                     backdropFilter: 'blur(4px)',
@@ -77,22 +78,48 @@ const SolutionCard = ({ solution }) => {
                     ))}
                 </div>
 
-                <a
-                    href={solution.url}
-                    className="btn-primary"
-                    style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        gap: '8px',
-                        textalign: 'center',
-                        textDecoration: 'none'
-                    }}
-                >
-                    Visit Site <ExternalLink size={16} />
-                </a>
+                <div style={{ display: 'flex', gap: '8px', flexDirection: 'column' }}>
+                    <a
+                        href={solution.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary"
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap: '8px',
+                            textAlign: 'center',
+                            textDecoration: 'none',
+                            padding: '12px 20px',
+                            fontSize: '0.95rem'
+                        }}
+                    >
+                        Découvrir cette expérience
+                    </a>
+
+                    <Link
+                        to={`/review/${solution.id === 1 ? 'candy-ai' : 'gptgirlfriend'}`}
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            gap: '8px',
+                            padding: '10px 16px',
+                            borderRadius: '99px',
+                            background: 'rgba(255,255,255,0.05)',
+                            color: 'var(--text-muted)',
+                            textDecoration: 'none',
+                            fontSize: '0.9rem',
+                            transition: 'all 0.2s',
+                            border: '1px solid rgba(255,255,255,0.1)'
+                        }}
+                    >
+                        📖 Lire l'article de témoignage
+                    </Link>
+                </div>
             </div>
-        </div>
+        </div >
     );
 };
 

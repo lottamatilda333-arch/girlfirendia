@@ -3,24 +3,26 @@
 :root {
   --bg-primary: #050505;
   --bg-secondary: #0a0a0a;
-  
-  /* Neon Accents */
-  --accent-primary: #8b5cf6; /* Violet */
-  --accent-secondary: #ec4899; /* Pink */
-  --accent-glow: rgba(139, 92, 246, 0.5);
-  
+
+  /* Soft Calm Accents */
+  --accent-primary: #a78bfa;
+  /* Soft Violet */
+  --accent-secondary: #818cf8;
+  /* Muted Indigo */
+  --accent-glow: rgba(167, 139, 250, 0.2);
+
   /* Text */
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+
   /* Glassmorphism */
-  --glass-surface: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-highlight: rgba(255, 255, 255, 0.1);
-  
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --glass-surface: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.04);
+  --glass-highlight: rgba(255, 255, 255, 0.08);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
 }
 
 * {

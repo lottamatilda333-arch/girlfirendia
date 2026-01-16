@@ -1,40 +1,17 @@
-import { useState, useMemo } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 import './index.css'
-import FilterBar from './components/FilterBar'
-import ResultGrid from './components/ResultGrid'
-import { solutions } from './data/mockData'
+import HomePage from './pages/HomePage'
+import ComparePage from './pages/ComparePage'
+import CandyAIReviewPage from './pages/CandyAIReviewPage'
+import GPTGirlfriendReviewPage from './pages/GPTGirlfriendReviewPage'
+import BlogPage from './pages/BlogPage'
+import BlogPostPage from './pages/BlogPostPage'
 import { Sparkles } from 'lucide-react'
 
 function App() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const filteredSolutions = useMemo(() => {
-    return solutions.filter(solution => {
-      // Category Filter
-      if (activeCategory !== "All") {
-        if (!solution.tags.some(tag => tag.toLowerCase() === activeCategory.toLowerCase())) {
-          return false;
-        }
-      }
-
-      // Search Filter
-      if (searchQuery) {
-        const query = searchQuery.toLowerCase();
-        return (
-          solution.name.toLowerCase().includes(query) ||
-          solution.description.toLowerCase().includes(query) ||
-          solution.tags.some(tag => tag.toLowerCase().includes(query))
-        );
-      }
-
-      return true;
-    });
-  }, [activeCategory, searchQuery]);
-
   return (
     <div className="app-container">
-      {/* Header */}
+      {/* En-tête */}
       <header className="glass-panel" style={{
         position: 'fixed',
         top: 20,
@@ -48,65 +25,36 @@ function App() {
         alignItems: 'center',
         zIndex: 100
       }}>
-        <div style={{ fontWeight: 700, fontSize: '1.5rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <Link to="/" style={{
+          fontWeight: 700,
+          fontSize: '1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '8px',
+          textDecoration: 'none',
+          color: 'inherit'
+        }}>
           <Sparkles size={24} className="text-gradient" />
-          <span>GFE<span className="text-gradient">Comparator</span></span>
-        </div>
-        <nav>
-          <button className="btn-primary">Explore</button>
+          <span>GFE<span className="text-gradient">Comparateur</span></span>
+        </Link>
+        <nav style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }}>
+          <Link to="/blog" style={{ textDecoration: 'none', color: 'var(--text-muted)', fontWeight: 500, fontSize: '0.95rem' }}>Espace Blog</Link>
+          <Link to="/" className="btn-primary" style={{ padding: '8px 24px', fontSize: '0.9rem' }}>Découvrir</Link>
         </nav>
       </header>
 
-      {/* Main Content */}
+      {/* Contenu Principal */}
       <main className="container" style={{ paddingTop: '140px', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/compare/candy-ai-vs-gptgirlfriend" element={<ComparePage />} />
+          <Route path="/review/candy-ai" element={<CandyAIReviewPage />} />
+          <Route path="/review/gptgirlfriend" element={<GPTGirlfriendReviewPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
+        </Routes>
 
-        {/* Hero Section */}
-        <div style={{ textAlign: 'center', margin: '0 0 4rem 0' }}>
-          <h1 style={{
-            fontSize: 'clamp(3rem, 5vw, 4.5rem)',
-            fontWeight: 800,
-            marginBottom: '1rem',
-            lineHeight: 1.1,
-            letterSpacing: '-2px'
-          }}>
-            Find Your Perfect <br />
-            <span className="text-gradient">AI Companion</span>
-          </h1>
-          <p style={{ color: 'var(--text-muted)', fontSize: '1.25rem', maxWidth: '600px', margin: '0 auto' }}>
-            Compare the best Girlfriend Experience solutions. <br />Powered by advanced AI models.
-          </p>
-        </div>
-
-        {/* Filters */}
-        <FilterBar
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-        />
-
-        {/* Results */}
-        <div style={{ flex: 1 }}>
-          <div style={{ marginBottom: '1rem', color: 'var(--text-muted)' }}>
-            Showing {filteredSolutions.length} results
-          </div>
-
-          {filteredSolutions.length > 0 ? (
-            <ResultGrid solutions={filteredSolutions} />
-          ) : (
-            <div style={{
-              textAlign: 'center',
-              padding: '4rem',
-              color: 'var(--text-muted)',
-              background: 'rgba(255,255,255,0.02)',
-              borderRadius: '20px'
-            }}>
-              No companions found matching your criteria.
-            </div>
-          )}
-        </div>
-
-        {/* Footer */}
+        {/* Pied de page */}
         <footer style={{
           marginTop: 'auto',
           borderTop: '1px solid var(--glass-border)',
@@ -115,7 +63,7 @@ function App() {
           textAlign: 'center',
           fontSize: '0.9rem'
         }}>
-          &copy; 2026 GFE Comparator. All rights reserved.
+          &copy; 2026 GFE Comparateur. Tous droits réservés.
         </footer>
       </main>
     </div>
