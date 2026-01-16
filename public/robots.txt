@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://girlfirendia.vercel.app/sitemap.xml
