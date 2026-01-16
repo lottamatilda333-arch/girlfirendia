@@ -6,6 +6,9 @@ import CandyAIReviewPage from './pages/CandyAIReviewPage'
 import GPTGirlfriendReviewPage from './pages/GPTGirlfriendReviewPage'
 import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
+import LegalPage from './pages/LegalPage'
+import PrivacyPage from './pages/PrivacyPage'
+import Footer from './components/Footer'
 import { Sparkles } from 'lucide-react'
 
 function App() {
@@ -52,19 +55,11 @@ function App() {
           <Route path="/review/gptgirlfriend" element={<GPTGirlfriendReviewPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/mentions-legales" element={<LegalPage />} />
+          <Route path="/confidentialite" element={<PrivacyPage />} />
         </Routes>
 
-        {/* Pied de page */}
-        <footer style={{
-          marginTop: 'auto',
-          borderTop: '1px solid var(--glass-border)',
-          padding: '2rem 0',
-          color: 'var(--text-muted)',
-          textAlign: 'center',
-          fontSize: '0.9rem'
-        }}>
-          &copy; 2026 GFE Comparateur. Tous droits réservés.
-        </footer>
+        <Footer />
       </main>
     </div>
   )
