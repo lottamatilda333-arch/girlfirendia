@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import FilterBar from '../components/FilterBar'
 import ResultGrid from '../components/ResultGrid'
 import { solutions } from '../data/mockData'
+import Newsletter from '../components/Newsletter'
 import { Sparkles } from 'lucide-react'
 
 function HomePage() {
@@ -119,6 +120,11 @@ function HomePage() {
                         Aucune compagne trouvée correspondant à vos critères.
                     </div>
                 )}
+            </div>
+
+            {/* Engagement */}
+            <div style={{ marginTop: '6rem' }}>
+                <Newsletter />
             </div>
 
             {/* Section Technique discrète en bas */}
