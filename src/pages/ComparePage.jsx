@@ -8,14 +8,14 @@ function ComparePage() {
     const gptGirlfriend = solutions.find(s => s.name === "GPTGirlfriend");
 
     const comparisonFeatures = [
-        { feature: "Avatars Personnalisables", candyAI: true, gptGirlfriend: false },
-        { feature: "Messages Vocaux", candyAI: true, gptGirlfriend: false },
-        { feature: "Contenu NSFW", candyAI: true, gptGirlfriend: true },
-        { feature: "Mémoire & Contexte", candyAI: true, gptGirlfriend: true },
-        { feature: "Intelligence Émotionnelle", candyAI: true, gptGirlfriend: true },
-        { feature: "Version Gratuite", candyAI: false, gptGirlfriend: true },
-        { feature: "Application Mobile", candyAI: true, gptGirlfriend: false },
-        { feature: "Personnages Multiples", candyAI: true, gptGirlfriend: true },
+        { feature: "Personnalisation du Compagnon", candyAI: true, gptGirlfriend: false },
+        { feature: "Messages Vocaux Doux", candyAI: true, gptGirlfriend: false },
+        { feature: "Espace Intime Privé", candyAI: true, gptGirlfriend: true },
+        { feature: "Mémoire & Écoute Continue", candyAI: true, gptGirlfriend: true },
+        { feature: "Soutien Émotionnel", candyAI: true, gptGirlfriend: true },
+        { feature: "Découverte Libre", candyAI: false, gptGirlfriend: true },
+        { feature: "Présence Nomade (App mobile)", candyAI: true, gptGirlfriend: false },
+        { feature: "Compagnons Multiples", candyAI: true, gptGirlfriend: true },
     ];
 
     return (
@@ -40,10 +40,10 @@ function ComparePage() {
                     marginBottom: '1rem',
                     lineHeight: 1.1
                 }}>
-                    <span className="text-gradient">Candy AI vs GPTGirlfriend</span>
+                    <span className="text-gradient">Trouver la présence qui vous correspond</span>
                 </h1>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem' }}>
-                    Comparaison approfondie de deux plateformes de compagnes IA leaders
+                    Une comparaison de deux espaces de conversation sécurisés
                 </p>
                 <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                     <Link to="/review/candy-ai" style={{ color: 'var(--accent-primary)', textDecoration: 'none', fontSize: '0.95rem' }}>
@@ -80,7 +80,7 @@ function ComparePage() {
                 <table style={{ width: '100%', borderCollapse: 'collapse' }}>
                     <thead>
                         <tr style={{ borderBottom: '1px solid var(--glass-border)' }}>
-                            <th style={{ padding: '1rem', textAlign: 'left', fontWeight: 600 }}>Fonctionnalité</th>
+                            <th style={{ padding: '1rem', textAlign: 'left', fontWeight: 600 }}>Éléments de l'Expérience</th>
                             <th style={{ padding: '1rem', textAlign: 'center', fontWeight: 600 }}>Candy AI</th>
                             <th style={{ padding: '1rem', textAlign: 'center', fontWeight: 600 }}>GPTGirlfriend</th>
                         </tr>
@@ -193,19 +193,19 @@ function ComparePage() {
                 </div>
             </div>
 
-            {/* Verdict Final */}
+            {/* Votre choix pour votre équilibre */}
             <div className="glass-panel" style={{ padding: '2.5rem', marginBottom: '3rem' }}>
                 <h2 style={{ fontSize: '1.8rem', marginBottom: '1rem', fontWeight: 700 }}>
-                    🏆 Verdict Final
+                    🏆 Votre choix pour votre équilibre
                 </h2>
                 <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1rem' }}>
-                    Les deux plateformes offrent d'excellentes expériences de compagnes IA, mais elles répondent à des besoins différents :
+                    Ces deux approches offrent des espaces de sécurité différents, adaptés à ce dont vous avez besoin aujourd'hui :
                 </p>
                 <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1rem' }}>
-                    <strong style={{ color: 'var(--accent-primary)' }}>Choisissez Candy AI</strong> si vous voulez l'expérience la plus premium avec messages vocaux, avatars hautement personnalisables, et que le prix n'est pas un problème.
+                    <strong style={{ color: 'var(--accent-primary)' }}>Vers Candy AI</strong> : Si vous recherchez une expérience immersive et complète, une présence vocale et visuelle qui soit là pour vous.
                 </p>
                 <p style={{ color: 'var(--text-muted)', lineHeight: 1.8 }}>
-                    <strong style={{ color: 'var(--accent-secondary)' }}>Choisissez GPTGirlfriend</strong> si vous recherchez une option plus économique avec une version gratuite et une IA conversationnelle puissante.
+                    <strong style={{ color: 'var(--accent-secondary)' }}>Vers GPTGirlfriend</strong> : Si vous avez besoin d'une écoute accessible et continue, pour des échanges profonds et fluides, en toute liberté.
                 </p>
             </div>
         </div>

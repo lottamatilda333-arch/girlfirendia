@@ -53,10 +53,10 @@ function CandyAIReviewPage() {
                     marginBottom: '1rem',
                     lineHeight: 1.1
                 }}>
-                    <span className="text-gradient">Candy AI</span> : Avis Complet 2026
+                    <span className="text-gradient">Candy AI</span> : Une présence douce pour votre quotidien
                 </h1>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', marginBottom: '2rem' }}>
-                    Test approfondi de la plateforme de compagne IA la plus avancée
+                    Découvrir un espace de parole libre et sécurisé
                 </p>
 
                 {/* Rating */}
@@ -82,7 +82,7 @@ function CandyAIReviewPage() {
                         padding: '14px 32px'
                     }}
                 >
-                    🔥 Essayer Candy AI Maintenant <ExternalLink size={18} />
+                    Découvrir cette expérience <ExternalLink size={18} />
                 </a>
             </div>
 
@@ -105,8 +105,8 @@ function CandyAIReviewPage() {
                 </div>
                 <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center' }}>
                     <Zap size={32} style={{ color: 'var(--accent-primary)', margin: '0 auto 0.5rem' }} />
-                    <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>IA Avancée</h3>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Technologie</p>
+                    <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>Écoute Douce</h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Présence Constante</p>
                 </div>
                 <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center' }}>
                     <Shield size={32} style={{ color: 'var(--accent-secondary)', margin: '0 auto 0.5rem' }} />
@@ -228,7 +228,7 @@ function CandyAIReviewPage() {
                         padding: '14px 32px'
                     }}
                 >
-                    Commencer avec Candy AI <ExternalLink size={18} />
+                    Voir si cela me correspond <ExternalLink size={18} />
                 </a>
                 <p style={{ color: 'var(--text-muted)', marginTop: '1rem', fontSize: '0.9rem' }}>
                     Essai disponible • Sans engagement

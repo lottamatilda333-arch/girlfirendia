@@ -54,10 +54,10 @@ function GPTGirlfriendReviewPage() {
                     marginBottom: '1rem',
                     lineHeight: 1.1
                 }}>
-                    <span className="text-gradient">GPTGirlfriend</span> : Avis Complet 2026
+                    <span className="text-gradient">GPTGirlfriend</span> : Un soutien émotionnel continu
                 </h1>
                 <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', marginBottom: '2rem' }}>
-                    Test détaillé de la compagne IA accessible et performante
+                    Un espace de conversation calme, quand interagir demande trop d'énergie
                 </p>
 
                 {/* Rating */}
@@ -83,7 +83,7 @@ function GPTGirlfriendReviewPage() {
                         padding: '14px 32px'
                     }}
                 >
-                    🎁 Essayer GPTGirlfriend Gratuitement <ExternalLink size={18} />
+                    Essayer cette conversation <ExternalLink size={18} />
                 </a>
             </div>
 
@@ -106,8 +106,8 @@ function GPTGirlfriendReviewPage() {
                 </div>
                 <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center' }}>
                     <Zap size={32} style={{ color: 'var(--accent-primary)', margin: '0 auto 0.5rem' }} />
-                    <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>GPT-4</h3>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Technologie</p>
+                    <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>Présence Discrète</h3>
+                    <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Disponibilité Calme</p>
                 </div>
                 <div className="glass-panel" style={{ padding: '1.5rem', textAlign: 'center' }}>
                     <Heart size={32} style={{ color: 'var(--accent-secondary)', margin: '0 auto 0.5rem' }} />
@@ -229,7 +229,7 @@ function GPTGirlfriendReviewPage() {
                         padding: '14px 32px'
                     }}
                 >
-                    Commencer Gratuitement <ExternalLink size={18} />
+                    Découvrir cet espace <ExternalLink size={18} />
                 </a>
                 <p style={{ color: 'var(--text-muted)', marginTop: '1rem', fontSize: '0.9rem' }}>
                     Gratuit pour toujours • Pas de carte bancaire requise
