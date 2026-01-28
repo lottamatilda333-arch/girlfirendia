@@ -86,3 +86,28 @@ button {
   transform: translateY(-2px);
   box-shadow: 0 8px 30px var(--accent-glow);
 }
+
+/* Blog Content Styles */
+.blog-content h2 {
+  margin: 2.5rem 0 1.25rem;
+  color: var(--accent-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-content ul, .blog-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.75rem;
+}
+
+.blog-content strong {
+  color: var(--accent-secondary);
+}
